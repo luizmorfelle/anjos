@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
     <footer className="py-8 bg-primary text-white">
       <div className="container mx-auto flex flex-wrap justify-between items-center">
         <div className="w-full md:w-auto mb-4 md:mb-0">
-          <img src="/logo_branca.png" alt="Logo" className="w-36 h-auto" />
+          <img src="/logo_branca.png" alt="Logo" className="h-28 h-auto" />
         </div>
         <div className="w-full md:w-auto mb-4 md:mb-0">
           <h4 className="text-lg font-semibold mb-2">Localização</h4>
