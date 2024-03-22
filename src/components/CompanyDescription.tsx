@@ -43,7 +43,7 @@ const CompanyDescription: React.FC = () => {
       ) {
         let counter = 0;
         const intervalId = setInterval(() => {
-          counter++;
+          counter+=5;
           companyNumbers.forEach((company, index) => {
             const sum = company.actual;
             
