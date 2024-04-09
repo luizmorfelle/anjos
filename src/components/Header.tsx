@@ -1,42 +1,47 @@
-// components/Header.tsx
+"use client";
 import React from "react";
+import { FaBars } from "react-icons/fa";
+import HeaderLink from "./HeaderLink";
 
-const HeaderLink: React.FC<{ title: string }> = ({
-  title,
+
+
+const Header = ({
+  showSidebar,
+  toggleSidebar,
 }: {
-  title: string;
+  showSidebar: boolean;
+  toggleSidebar: () => void;
 }) => {
   return (
-    <li>
-      <a
-        href="#"
-        className="hover:text-primary ease-in-out duration-200 relative hover:font-medium"
+    <header className="bg-gray-950 text-secondary py-6 sticky top-0 z-50">
+      <div
+        className="container mx-auto flex justify-between items-center px-10 md:px-0"
+        id="header"
       >
-        {title}
-      </a>
-    </li>
-  );
-};
-
-const Header: React.FC = () => {
-  return (
-    <header className="bg-white text-secondary py-6">
-      <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img
-            src="/logo_preta.png"
+            src="/logo_branca.png"
             alt="Anjos Terraplanagem"
-            className="h-14"
+            className="h-12 md:h-14"
           />
         </div>
-        <nav>
-          <ul className="flex space-x-10">
-            <HeaderLink title="Home"></HeaderLink>
-            <HeaderLink title="Sobre"></HeaderLink>
-            <HeaderLink title="Serviços"></HeaderLink>
-            <HeaderLink title="Contato"></HeaderLink>
+        <nav className="hidden md:flex">
+          <ul className="flex space-x-10 text-white text-lg">
+            <HeaderLink title="Home" idRef="start"></HeaderLink>
+            {/* <HeaderLink title="Sobre" idRef="about-section"></HeaderLink> */}
+            <HeaderLink title="Serviços" idRef="service-section"></HeaderLink>
+            <HeaderLink title="Clientes" idRef="clients-section"></HeaderLink>
+            <HeaderLink title="Contato" idRef="contact-section"></HeaderLink>
           </ul>
         </nav>
+        <div
+          className={`flex md:hidden text-white p-2 border-2 border-transparent transition duration-300 rounded-full ${showSidebar ? "border-white" : ""}`}
+          onClick={() => {
+            toggleSidebar();
+          }}
+        >
+          <FaBars size={24} />
+        </div>
       </div>
     </header>
   );

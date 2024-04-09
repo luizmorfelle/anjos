@@ -1,4 +1,6 @@
 "use client";
+
+import { TruckIcon } from "@heroicons/react/24/solid";
 // components/CompanyDescription.tsx
 import React, { useEffect, useState } from "react";
 
@@ -43,10 +45,10 @@ const CompanyDescription: React.FC = () => {
       ) {
         let counter = 0;
         const intervalId = setInterval(() => {
-          counter+=5;
+          counter += 5;
           companyNumbers.forEach((company, index) => {
             const sum = company.actual;
-            
+
             company.actual =
               counter > company.number
                 ? company.number
@@ -74,7 +76,7 @@ const CompanyDescription: React.FC = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-gray-100" id="about-section">
+    <section className="py-16 bg-gray-100 px-10 md:px-0" id="about-section">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold mb-4 ">Sobre Nós</h2>
         <p className="mb-4">
@@ -90,15 +92,19 @@ const CompanyDescription: React.FC = () => {
 
         <div className="mt-8 border-t border-gray-300 pt-6">
           {/* <h3 className="text-2xl font-bold mb-4">Nossos Valores</h3> */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {companyNumbers.map((company, index) => (
               <div
                 key={index}
-                className="bg-white p-4 rounded-lg shadow-lg flex flex-col items-center transition duration-300 transform hover:scale-105"
+                className="bg-black p-4 rounded-lg shadow-lg flex flex-col items-center transition duration-300 transform hover:scale-105 gap-5"
               >
-                {/* <HiOutlineHammer className="text-primary text-4xl mb-2" /> */}
-                <h4 className="text-lg font-semibold">{company.title}</h4>
-                <p className="text-gray-600">
+                <div className="text-orange-600 h-16">
+                  <TruckIcon className="h-full" />
+                </div>
+                <h4 className="text-white text-lg font-semibold">
+                  {company.title}
+                </h4>
+                <p className="text-3xl font-extrabold text-orange-600">
                   {company.actual} {company.postLabel || ""}
                 </p>
               </div>
