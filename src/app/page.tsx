@@ -1,12 +1,12 @@
 "use client";
-import React, { useState } from "react";
-import Header from "../components/Header";
+import MobileMenu from "@/components/MobileMenu";
+import SubFooter from "@/components/SubFooter";
+import { useState } from "react";
 import Carousel from "../components/Carousel";
-import CompanyDescription from "../components/CompanyDescription";
-import Services from "../components/Services";
 import Clients from "../components/Clients";
 import Footer from "../components/Footer";
-import MobileMenu from "@/components/MobileMenu";
+import Header from "../components/Header";
+import Services from "../components/Services";
 
 const Home = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -24,6 +24,7 @@ const Home = () => {
       <Services />
       <Clients />
       <Footer />
+      <SubFooter />
     </div>
   );
 };

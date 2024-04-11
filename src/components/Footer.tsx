@@ -22,10 +22,10 @@ const Footer: React.FC = () => {
           </div>
           <p>Telefone: (48) 3263-0436</p>
           <p>Email: anjosjunior@unetvale.com.br</p>
-          <div className="flex gap-2 items-center pt-2"> 
-            <FaInstagram size={40} />
-            <FaWhatsapp size={40} />
-          </div>
+          <button className="flex items-center text-white gap-2 bg-orange-600 py-2 w-full rounded justify-center mt-2 font-medium text-sm hover:bg-orange-700 transition duration-200">
+            <FaWhatsapp size={16} />
+            <p>Entre em contato</p>
+          </button>
         </div>
         <div className="w-full md:w-auto mb-4 md:mb-0">
           <div className="flex">

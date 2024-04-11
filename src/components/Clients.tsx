@@ -8,7 +8,7 @@ type ClientCardProps = {
 
 function ClientCard(props: ClientCardProps) {
   return (
-    <div className="flex items-center justify-center p-4 bg-slate-300 md:size-48 size-36">
+    <div className="flex items-center justify-center p-4 bg-slate-200 md:size-48 size-36">
       <img
         src="/client1.jpg"
         alt="Cliente 1"

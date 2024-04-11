@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaWhatsapp } from "react-icons/fa";
 import HeaderLink from "./HeaderLink";
-
-
 
 const Header = ({
   showSidebar,
@@ -13,9 +11,19 @@ const Header = ({
   toggleSidebar: () => void;
 }) => {
   return (
-    <header className="bg-gray-950 text-secondary py-6 sticky top-0 z-50">
+    <header className="bg-gray-950 text-secondary sticky top-0 z-50">
+      <div className="flex items-end justify-between">
+        <div></div>
+        <div className="text-white text-xs font-medium">
+          Horário de funcionamento: Seg - Sex | 08:00 - 17:00{" "}
+        </div>
+        <button className="flex items-center text-white gap-2 bg-orange-600 py-2 px-8 font-medium text-sm hover:bg-orange-700 transition duration-200">
+          <FaWhatsapp size={16} />
+          <p>Entre em contato</p>
+        </button>
+      </div>
       <div
-        className="container mx-auto flex justify-between items-center px-10 md:px-0"
+        className="container mx-auto flex justify-between items-center px-10 md:px-0 py-6"
         id="header"
       >
         <div className="flex items-center">
@@ -35,7 +43,9 @@ const Header = ({
           </ul>
         </nav>
         <div
-          className={`flex md:hidden text-white p-2 border-2 border-transparent transition duration-300 rounded-full ${showSidebar ? "border-white" : ""}`}
+          className={`flex md:hidden text-white p-2 border-2 border-transparent transition duration-300 rounded-full ${
+            showSidebar ? "border-white" : ""
+          }`}
           onClick={() => {
             toggleSidebar();
           }}
