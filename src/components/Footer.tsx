@@ -1,5 +1,6 @@
 // components/Footer.tsx
 
+import openWhatsapp from "@/utils/utils";
 import { PhoneIcon } from "@heroicons/react/24/outline";
 import { MapPinIcon } from "@heroicons/react/24/outline";
 import React from "react";
@@ -15,14 +16,20 @@ const Footer: React.FC = () => {
         <div className="w-full md:w-auto mb-4 md:mb-0">
           <img src="/logo_branca.png" alt="Logo" className="h-20" />
         </div>
-        <div className="w-full md:w-auto mb-4 md:mb-0">
+        <div className="w-full md:w-auto mb-4 md:mb-0 gap-1 flex flex-col">
           <div className="flex">
             <PhoneIcon className="h-6" />
             <h4 className=" ml-2 text-lg font-semibold mb-2">Contato</h4>
           </div>
           <p>Telefone: (48) 3263-0436</p>
           <p>Email: anjosjunior@unetvale.com.br</p>
-          <button className="flex items-center text-white gap-2 bg-orange-600 py-2 w-full rounded justify-center mt-2 font-medium text-sm hover:bg-orange-700 transition duration-200">
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              openWhatsapp();
+            }}
+            className="flex items-center text-white gap-2 bg-orange-600 py-2 w-full rounded justify-center mt-2 font-medium text-sm hover:bg-orange-700 transition duration-200"
+          >
             <FaWhatsapp size={16} />
             <p>Entre em contato</p>
           </button>

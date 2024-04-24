@@ -1,4 +1,5 @@
 // components/Services.tsx
+import openWhatsapp from "@/utils/utils";
 import { RocketLaunchIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import {
@@ -37,7 +38,15 @@ const ServiceCard = ({
         <div className="my-4 w-48 h-0.5 bg-white">
           <div> </div>
         </div>
-        {description && <div className="text-center">{description}</div>}
+        {description && (
+          <div className="flex flex-col justify-evenly">
+            {description.split("\\").map((item, index) => (
+              <div key={index} className="text-center py-3">
+                {item}
+              </div>
+            ))}
+          </div>
+        )}
         {items && (
           <ul className="list-disc ">
             {items.map((item, index) => (
@@ -84,22 +93,43 @@ const Services: React.FC = () => {
       </div>
       <div className="grid md:grid-cols-3 grid-cols-1">
         <ServiceCard
-          title="Equipamentos"
-          description="Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica,"
+          title="Nossos Equipamentos"
+          items={[
+            "Terraplanagem",
+            "Enrocamento",
+            "Demolição",
+            "Drenagem",
+            "Limpeza de terreno",
+            "Locação de equipamentos",
+          ]}
           icon={<FaToolbox className="size-20 text-gray-800" />}
           color="bg-gray-800"
         />
         <ServiceCard
-          title="Serviços"
-          description="Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica,"
+          title="Nossos Serviços"
+          items={[
+            "Escavadeira",
+            "Pá carregadeira",
+            "Rolo compactador",
+            "Trator de esteira",
+            "Motoniveladora",
+            "Caminhão truck",
+            "Caminhão pipa",
+          ]}
           icon={<FaTools className="size-20 text-gray-900" />}
           color="bg-gray-900"
         />
         <ServiceCard
           title="Entre em contato"
-          description="Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica,"
+          description="Entre em contato com a nossa equipe para um atendimento personalizado e esclareça todas as suas dúvidas. \\ Será um prazer atendê-lo(a)!"
           action={
-            <button className="flex items-center text-white gap-2 bg-orange-600 py-2 w-full rounded justify-center mt-2 font-medium text-sm hover:bg-orange-700 transition duration-200">
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                openWhatsapp();
+              }}
+              className="flex items-center text-white gap-2 bg-orange-600 py-2 w-full rounded justify-center mt-2 font-medium text-sm hover:bg-orange-700 transition duration-200"
+            >
               <FaWhatsapp size={16} />
               <p>Entre em contato</p>
             </button>

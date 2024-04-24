@@ -2,6 +2,7 @@
 import React from "react";
 import { FaBars, FaWhatsapp } from "react-icons/fa";
 import HeaderLink from "./HeaderLink";
+import openWhatsapp from "@/utils/utils";
 
 const Header = ({
   showSidebar,
@@ -17,7 +18,13 @@ const Header = ({
         <div className="text-white text-xs font-medium">
           Horário de funcionamento: Seg - Sex | 08:00 - 17:00{" "}
         </div>
-        <button className="flex items-center text-white gap-2 bg-orange-600 py-2 px-8 font-medium text-sm hover:bg-orange-700 transition duration-200">
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            openWhatsapp();
+          }}
+          className="flex items-center text-white gap-2 bg-orange-600 py-2 px-8 font-medium text-sm hover:bg-orange-700 transition duration-200"
+        >
           <FaWhatsapp size={16} />
           <p>Entre em contato</p>
         </button>
