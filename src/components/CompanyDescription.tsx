@@ -1,115 +1,92 @@
 "use client";
 
-import { TruckIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 // components/CompanyDescription.tsx
-import React, { useEffect, useState } from "react";
+import React from "react";
+import Slider from "react-slick";
 
-const CompanyNumbers = [
-  {
-    title: "Obras Concluídas",
-    number: 100,
-    actual: 0,
-  },
-  {
-    title: "Metragem Trabalhada",
-    number: 10000,
-    actual: 0,
-    postLabel: "m²",
-  },
-  {
-    title: "Número de Caminhões",
-    number: 54,
-    actual: 0,
-  },
-  {
-    title: "Número de Funcionários",
-    number: 202,
-    actual: 0,
-  },
-];
+var settings = {
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  speed: 500,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  centerMode: true,
+  autoplaySpeed: 4000,
+  centerPadding: "40px",
+  adaptiveHeight: true,
+  arrows: false,
+  pauseOnHover: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 1,
+        initialSlide: 2,
+      },
+    },
+  ],
+};
 
 const CompanyDescription: React.FC = () => {
-  const [companyNumbers, setCompanyNumbers] = useState(CompanyNumbers);
-
-  useEffect(() => {
-    const aboutSection = document.getElementById("about-section");
-    if (!aboutSection) return;
-
-    const aboutSectionPosition = aboutSection.offsetTop;
-    const windowHeight = window.innerHeight;
-
-    const updateCounters = () => {
-      if (
-        window.scrollY > aboutSectionPosition - windowHeight * 0.75 &&
-        !companyNumbers.every((company) => company.actual === company.number)
-      ) {
-        let counter = 0;
-        const intervalId = setInterval(() => {
-          counter += 5;
-          companyNumbers.forEach((company, index) => {
-            const sum = company.actual;
-
-            company.actual =
-              counter > company.number
-                ? company.number
-                : counter > company.actual
-                ? counter
-                : company.actual;
-            if (index == companyNumbers.indexOf(company)) {
-              setCompanyNumbers([...companyNumbers]);
-            }
-          });
-
-          if (
-            companyNumbers.every((company) => company.actual === company.number)
-          ) {
-            clearInterval(intervalId);
-          }
-        }, 5);
-      }
-    };
-
-    window.addEventListener("scroll", updateCounters);
-    return () => {
-      window.removeEventListener("scroll", updateCounters);
-    };
-  }, []);
-
   return (
-    <section className="py-16 bg-gray-100 px-10 md:px-0" id="about-section">
+    <section
+      className="py-16 bg-zinc-900 px-10 md:px-0 text-white"
+      id="about-section"
+    >
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-4 ">Sobre Nós</h2>
-        <p className="mb-4">
-          A Anjos Terraplanagem é uma empresa especializada em serviços de
-          terraplanagem, demolição, fundação e limpeza. Com anos de experiência
-          no mercado, fornecemos soluções eficientes e de alta qualidade para
-          nossos clientes.
+        <h2 className="text-3xl font-bold mb-6">Anjos Terraplanagem</h2>
+        <p className="my-4">
+          A Anjos Terraplanagem e Locação LTDA é uma empresa estabelecida em
+          Tijucas, Santa Catarina, com um legado de mais de 30 anos de atuação
+          no setor de terraplanagem e locação de equipamentos. Desde sua
+          fundação em 1° de setembro de 1993, a empresa se destaca pelo
+          compromisso com a qualidade e a satisfação do cliente, buscando sempre
+          atualização e primor em seus serviços.
         </p>
-        <p>
-          Com uma equipe de profissionais qualificados e equipamentos modernos,
-          garantimos resultados superiores em todos os nossos projetos.
+        <p className="my-4">
+          A equipe da Anjos Terraplanagem e Locação é formada por profissionais
+          experientes e dedicados, que compartilham o compromisso da empresa com
+          excelência. Cada membro da equipe é treinado para proporcionar um
+          serviço de alta qualidade, garantindo que cada projeto seja concluído
+          com sucesso e dentro dos prazos estabelecidos.
         </p>
-
-        <div className="mt-8 border-t border-gray-300 pt-6">
-          {/* <h3 className="text-2xl font-bold mb-4">Nossos Valores</h3> */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {companyNumbers.map((company, index) => (
-              <div
-                key={index}
-                className="bg-black p-4 rounded-lg shadow-lg flex flex-col items-center transition duration-300 transform hover:scale-105 gap-5"
-              >
-                <div className="text-orange-600 h-16">
-                  <TruckIcon className="h-full" />
-                </div>
-                <h4 className="text-white text-lg font-semibold">
-                  {company.title}
-                </h4>
-                <p className="text-3xl font-extrabold text-orange-600">
-                  {company.actual} {company.postLabel || ""}
-                </p>
-              </div>
-            ))}
-          </div>
+        <p className="my-4">
+          Além disso, a Anjos mantém um compromisso firme com a inovação,
+          incorporando constantemente novas tecnologias e práticas de trabalho
+          para aprimorar ainda mais seus serviços. Isso inclui não apenas a
+          modernização de equipamentos, mas também o desenvolvimento de métodos
+          de trabalho mais eficientes e sustentáveis, se destando por sua
+          capacidade de adaptar-se às necessidades específicas de cada cliente,
+          oferecendo soluções personalizadas e eficazes.
+        </p>
+      </div>
+      <div className="flex items-center justify-center mx-auto mt-10 md:px-48 px-0">
+        <div className="md:w-full w-screen h-[25rem] ">
+          <Slider {...settings}>
+            {Array(8)
+              .fill(null)
+              .map((_, i) => i)
+              .map((index) => {
+                return (
+                  <div key={index} className="h-[25rem] px-2 md:px-3">
+                    <img
+                      key={index}
+                      src={`/images/${index}.jpg`}
+                      alt=""
+                      className="h-full w-full object-cover object-center"
+                    />
+                  </div>
+                );
+              })}
+          </Slider>
         </div>
       </div>
     </section>

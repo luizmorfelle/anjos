@@ -9,7 +9,7 @@ import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 const Footer: React.FC = () => {
   return (
     <footer
-      className="py-10 bg-primary text-white px-10 md:px-0"
+      className="py-10 bg-zinc-950 text-white px-10 md:px-0"
       id="contact-section"
     >
       <div className="container mx-auto flex flex-wrap md:justify-between items-center gap-4 justify-center">

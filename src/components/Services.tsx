@@ -1,6 +1,5 @@
 // components/Services.tsx
 import openWhatsapp from "@/utils/utils";
-import { RocketLaunchIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import {
   FaFlagCheckered,
@@ -75,11 +74,13 @@ const Services: React.FC = () => {
         <ServiceCard
           title="Valores"
           items={[
-            "Qualidade: Comprometemo-nos com os mais altos padrões de qualidade em todas as nossas operações, garantindo a excêlencia em cada projeto realizado.",
+            "Qualidade",
             // "Segurança: Priorizamos a segurança de nossos colaboradores, clientes e comunidade em todas as nossas atividades, adotando práticas e procedimentos para prevenir acidentes e lesões.",
-            "Integridade: Agimos com honestidade, ética e transparência em todas as nossas interações, mantendo a confiança e o respeito de nossos clientes, parceiros e colaboradores.",
-            "Inovação: Buscamos constantemente novas tecnologias e metodologias para melhorar nossos processos e serviços, promovendo a inovação e eficiência.",
-            "Compromisso com o cliente: colocamos as necessidades de nossos clientes em primeiro lugar, oferecendo soluções personalizadas e um atendimento excepcional em todos os momentos.",
+            "Integridade",
+            "Inovação",
+            "Compromisso com o cliente",
+            "Ética",
+            "Resultado",
           ]}
           icon={<GrTask className="size-20 text-orange-700" />}
           color="bg-orange-700"
@@ -93,20 +94,21 @@ const Services: React.FC = () => {
       </div>
       <div className="grid md:grid-cols-3 grid-cols-1">
         <ServiceCard
-          title="Nossos Equipamentos"
+          title="Nossos Serviços"
           items={[
             "Terraplanagem",
+            "Mineração",
             "Enrocamento",
             "Demolição",
             "Drenagem",
             "Limpeza de terreno",
             "Locação de equipamentos",
           ]}
-          icon={<FaToolbox className="size-20 text-gray-800" />}
-          color="bg-gray-800"
+          icon={<FaToolbox className="size-20 text-zinc-800" />}
+          color="bg-zinc-800"
         />
         <ServiceCard
-          title="Nossos Serviços"
+          title="Nossos Equipamentos"
           items={[
             "Escavadeira",
             "Pá carregadeira",
@@ -116,8 +118,8 @@ const Services: React.FC = () => {
             "Caminhão truck",
             "Caminhão pipa",
           ]}
-          icon={<FaTools className="size-20 text-gray-900" />}
-          color="bg-gray-900"
+          icon={<FaTools className="size-20 text-zinc-900" />}
+          color="bg-zinc-900"
         />
         <ServiceCard
           title="Entre em contato"
@@ -134,8 +136,8 @@ const Services: React.FC = () => {
               <p>Entre em contato</p>
             </button>
           }
-          icon={<FaPhoneFlip className="size-20 text-gray-950" />}
-          color="bg-gray-950"
+          icon={<FaPhoneFlip className="size-20 text-zinc-950" />}
+          color="bg-zinc-950"
         />
       </div>
     </section>

@@ -7,6 +7,7 @@ import Clients from "../components/Clients";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Services from "../components/Services";
+import CompanyDescription from "@/components/CompanyDescription";
 
 const Home = () => {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -19,7 +20,7 @@ const Home = () => {
     <div>
       <Header toggleSidebar={toggleSidebar} showSidebar={showSidebar} />
       <Carousel />
-      {/* <CompanyDescription /> */}
+      <CompanyDescription />
       <MobileMenu toggleSidebar={toggleSidebar} showSidebar={showSidebar} />
       <Services />
       <Clients />
