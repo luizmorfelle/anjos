@@ -1,0 +1,76 @@
+[debug] [2024-06-03T13:27:06.656Z] ----------------------------------------------------------------------
+[debug] [2024-06-03T13:27:06.658Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lipex\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-06-03T13:27:06.658Z] CLI Version:   13.5.2
+[debug] [2024-06-03T13:27:06.659Z] Platform:      win32
+[debug] [2024-06-03T13:27:06.659Z] Node Version:  v18.17.0
+[debug] [2024-06-03T13:27:06.660Z] Time:          Mon Jun 03 2024 10:27:06 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2024-06-03T13:27:06.660Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-03T13:27:06.665Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-06-03T13:27:06.794Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-03T13:27:06.794Z] > authorizing via signed-in user (morfelle.luiz@gmail.com)
+[debug] [2024-06-03T13:27:06.795Z] [iam] checking project anjos-f09f0 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-06-03T13:27:06.796Z] > refreshing access token with scopes: []
+[debug] [2024-06-03T13:27:06.797Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-06-03T13:27:06.797Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-03T13:27:07.002Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-06-03T13:27:07.002Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-06-03T13:27:07.032Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/anjos-f09f0:testIamPermissions [none]
+[debug] [2024-06-03T13:27:07.032Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/anjos-f09f0:testIamPermissions x-goog-quota-user=projects/anjos-f09f0
+[debug] [2024-06-03T13:27:07.032Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/anjos-f09f0:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-03T13:27:07.343Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-06-03T13:27:07.343Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-06-03T13:27:08.247Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/anjos-f09f0:testIamPermissions 200
+[debug] [2024-06-03T13:27:08.248Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/anjos-f09f0:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-03T13:27:08.248Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/anjos-f09f0 [none]
+[debug] [2024-06-03T13:27:08.661Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/anjos-f09f0 200
+[debug] [2024-06-03T13:27:08.661Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/anjos-f09f0 {"projectId":"anjos-f09f0","projectNumber":"497800403642","displayName":"Anjos","name":"projects/anjos-f09f0","resources":{"hostingSite":"anjos-f09f0"},"state":"ACTIVE","etag":"1_9705fe43-f05b-4236-9eef-c33e04e33aaf"}
+[debug] [2024-06-03T13:27:13.698Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/anjos-f09f0/sites pageToken=&pageSize=10
+[debug] [2024-06-03T13:27:15.394Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/anjos-f09f0/sites 200
+[debug] [2024-06-03T13:27:15.395Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/anjos-f09f0/sites {"sites":[{"name":"projects/anjos-f09f0/sites/anjos-f09f0","defaultUrl":"https://anjos-f09f0.web.app","appId":"1:497800403642:web:f7be16433cfbcaf5814083","type":"DEFAULT_SITE"}]}
+[debug] [2024-06-03T13:27:15.395Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:497800403642:web:f7be16433cfbcaf5814083/config [none]
+[debug] [2024-06-03T13:27:16.715Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:497800403642:web:f7be16433cfbcaf5814083/config 403
+[debug] [2024-06-03T13:27:16.715Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:497800403642:web:f7be16433cfbcaf5814083/config {"error":{"code":403,"message":"Project '497800403642' not found or permission denied.\ncom.google.api.tenant.error.TenantManagerException: Project '497800403642' not found or permission denied.","status":"PERMISSION_DENIED"}}
+[debug] [2024-06-03T13:27:16.717Z] HTTP Error: 403, Project '497800403642' not found or permission denied.
+com.google.api.tenant.error.TenantManagerException: Project '497800403642' not found or permission denied.
+[debug] [2024-06-03T13:27:16.886Z] FirebaseError: HTTP Error: 403, Project '497800403642' not found or permission denied.
+com.google.api.tenant.error.TenantManagerException: Project '497800403642' not found or permission denied.
+    at responseToError (C:\Users\lipex\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\lipex\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:297:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get WEB app configuration. See firebase-debug.log for more info.
+[debug] [2024-06-03T13:38:31.943Z] ----------------------------------------------------------------------
+[debug] [2024-06-03T13:38:31.944Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\lipex\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-06-03T13:38:31.945Z] CLI Version:   13.5.2
+[debug] [2024-06-03T13:38:31.945Z] Platform:      win32
+[debug] [2024-06-03T13:38:31.945Z] Node Version:  v18.17.0
+[debug] [2024-06-03T13:38:31.946Z] Time:          Mon Jun 03 2024 10:38:31 GMT-0300 (Horário Padrão de Brasília)
+[debug] [2024-06-03T13:38:31.946Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-06-03T13:38:32.013Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-06-03T13:38:32.014Z] > authorizing via signed-in user (morfelle.luiz@gmail.com)
+[debug] [2024-06-03T13:38:32.014Z] [iam] checking project anjos-f09f0 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-06-03T13:38:32.016Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/anjos-f09f0:testIamPermissions [none]
+[debug] [2024-06-03T13:38:32.016Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/anjos-f09f0:testIamPermissions x-goog-quota-user=projects/anjos-f09f0
+[debug] [2024-06-03T13:38:32.017Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/anjos-f09f0:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-03T13:38:33.106Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/anjos-f09f0:testIamPermissions 200
+[debug] [2024-06-03T13:38:33.106Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/anjos-f09f0:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-06-03T13:38:33.107Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/anjos-f09f0 [none]
+[debug] [2024-06-03T13:38:33.612Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/anjos-f09f0 200
+[debug] [2024-06-03T13:38:33.613Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/anjos-f09f0 {"projectId":"anjos-f09f0","projectNumber":"497800403642","displayName":"Anjos","name":"projects/anjos-f09f0","resources":{"hostingSite":"anjos-f09f0"},"state":"ACTIVE","etag":"1_9705fe43-f05b-4236-9eef-c33e04e33aaf"}
+[debug] [2024-06-03T13:38:37.959Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/anjos-f09f0/sites pageToken=&pageSize=10
+[debug] [2024-06-03T13:38:39.343Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/anjos-f09f0/sites 200
+[debug] [2024-06-03T13:38:39.344Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/anjos-f09f0/sites {"sites":[{"name":"projects/anjos-f09f0/sites/anjos-f09f0","defaultUrl":"https://anjos-f09f0.web.app","appId":"1:497800403642:web:f7be16433cfbcaf5814083","type":"DEFAULT_SITE"}]}
+[debug] [2024-06-03T13:38:39.345Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:497800403642:web:f7be16433cfbcaf5814083/config [none]
+[debug] [2024-06-03T13:38:40.306Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:497800403642:web:f7be16433cfbcaf5814083/config 403
+[debug] [2024-06-03T13:38:40.306Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:497800403642:web:f7be16433cfbcaf5814083/config {"error":{"code":403,"message":"Project '497800403642' not found or permission denied.\ncom.google.api.tenant.error.TenantManagerException: Project '497800403642' not found or permission denied.","status":"PERMISSION_DENIED"}}
+[debug] [2024-06-03T13:38:40.307Z] HTTP Error: 403, Project '497800403642' not found or permission denied.
+com.google.api.tenant.error.TenantManagerException: Project '497800403642' not found or permission denied.
+[debug] [2024-06-03T13:38:40.472Z] FirebaseError: HTTP Error: 403, Project '497800403642' not found or permission denied.
+com.google.api.tenant.error.TenantManagerException: Project '497800403642' not found or permission denied.
+    at responseToError (C:\Users\lipex\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\lipex\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:297:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get WEB app configuration. See firebase-debug.log for more info.

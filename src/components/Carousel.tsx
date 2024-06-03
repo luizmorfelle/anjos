@@ -16,13 +16,13 @@ const Carousel: React.FC = () => {
   // };
 
   return (
-    <section className=" bg-zinc-950 pb-1" id="start">
+    <section className=" bg-zinc-950" id="start">
       <div>
         <div className="md:h-[45rem] flex md:flex-row w-screen max-w-full">
           <img
-            src="/logo_branca.png"
+            src="/bg1.jpg"
             alt="Projeto 1"
-            className=" w-full object-contain object-center justify-center p-20 "
+            className=" w-full  object-cover object-center "
           />
           {/* <div className="flex flex-col md:p-12 p-6 justify-evenly md:w-1/2 gap-6 md:gap-0">
             <div className="flex flex-col gap-3">

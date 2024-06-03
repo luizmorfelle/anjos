@@ -75,7 +75,6 @@ const Services: React.FC = () => {
           title="Valores"
           items={[
             "Qualidade",
-            // "Segurança: Priorizamos a segurança de nossos colaboradores, clientes e comunidade em todas as nossas atividades, adotando práticas e procedimentos para prevenir acidentes e lesões.",
             "Integridade",
             "Inovação",
             "Compromisso com o cliente",
