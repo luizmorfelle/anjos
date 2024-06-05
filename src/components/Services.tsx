@@ -63,7 +63,7 @@ const ServiceCard = ({
 
 const Services: React.FC = () => {
   return (
-    <section id="service-section">
+    <section id="values-section">
       <div className="grid md:grid-cols-3 grid-cols-1">
         <ServiceCard
           title="Missão"
@@ -91,7 +91,7 @@ const Services: React.FC = () => {
           color="bg-orange-800"
         />
       </div>
-      <div className="grid md:grid-cols-3 grid-cols-1">
+      <div className="grid md:grid-cols-3 grid-cols-1" id="service-section">
         <ServiceCard
           title="Nossos Serviços"
           items={[

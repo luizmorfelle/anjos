@@ -71,7 +71,7 @@ const CompanyDescription: React.FC = () => {
       <div className="flex items-center justify-center mx-auto mt-10 md:px-48 px-0">
         <div className="md:w-full w-screen h-[25rem] ">
           <Slider {...settings}>
-            {Array(11)
+            {Array(7)
               .fill(null)
               .map((_, i) => i)
               .map((index) => {

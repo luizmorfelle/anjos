@@ -44,6 +44,7 @@ const Header = ({
           <ul className="flex space-x-10 text-white text-lg">
             <HeaderLink title="Home" idRef="start" />
             <HeaderLink title="Sobre" idRef="about-section"/>
+            <HeaderLink title="Valores" idRef="values-section"/>
             <HeaderLink title="Serviços" idRef="service-section" />
             <HeaderLink title="Clientes" idRef="clients-section" />
             <HeaderLink title="Contato" idRef="contact-section" />
