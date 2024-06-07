@@ -25,8 +25,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
+  /* font-family: Helvetica, Arial, "Lucida Grande", sans-serif; */
+  letter-spacing: 0.12em;
   font-weight: 300;
 }
 

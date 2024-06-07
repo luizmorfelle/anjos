@@ -1,4 +1,3 @@
-// components/Clients.tsx
 import React from "react";
 
 type ClientCardProps = {

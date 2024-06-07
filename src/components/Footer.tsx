@@ -1,10 +1,7 @@
-// components/Footer.tsx
-
 import openWhatsapp from "@/utils/utils";
-import { PhoneIcon } from "@heroicons/react/24/outline";
-import { MapPinIcon } from "@heroicons/react/24/outline";
+import { MapPinIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import React from "react";
-import { FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer: React.FC = () => {
   return (

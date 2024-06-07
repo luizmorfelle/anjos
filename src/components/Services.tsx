@@ -3,10 +3,9 @@ import openWhatsapp from "@/utils/utils";
 import React from "react";
 import {
   FaFlagCheckered,
-  FaRocket,
   FaToolbox,
   FaTools,
-  FaWhatsapp,
+  FaWhatsapp
 } from "react-icons/fa";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { GiBullseye } from "react-icons/gi";

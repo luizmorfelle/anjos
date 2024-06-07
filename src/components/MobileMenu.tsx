@@ -1,5 +1,6 @@
 import React from "react";
 import HeaderLink from "./HeaderLink";
+import { linksHeader } from "@/utils/utils";
 
 export default function MobileMenu({
   showSidebar,
@@ -16,10 +17,14 @@ export default function MobileMenu({
     >
       <div className="pt-28 p-6 h-screen flex flex-col justify-between items-center">
         <ul className="flex flex-col gap-10">
-          <HeaderLink title="Home" idRef="start" />
-          <HeaderLink title="Serviços" idRef="service-section" />
-          <HeaderLink title="Clientes" idRef="clients-section" />
-          <HeaderLink title="Contato" idRef="contact-section" />
+          {linksHeader.map((link) => (
+            <HeaderLink
+              key={link.idRef}
+              title={link.title}
+              idRef={link.idRef}
+              onClick={() => toggleSidebar()}
+            />
+          ))}
         </ul>
         <div className="font-thin text-sm">Todos os direitos reservados</div>
       </div>

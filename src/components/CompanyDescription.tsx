@@ -1,7 +1,4 @@
 "use client";
-
-import Image from "next/image";
-// components/CompanyDescription.tsx
 import React from "react";
 import Slider from "react-slick";
 
@@ -42,7 +39,7 @@ const CompanyDescription: React.FC = () => {
       id="about-section"
     >
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-6">Anjos Terraplanagem</h2>
+        <h2 className="text-3xl font-bold mb-6">A Empresa</h2>
         <p className="my-4">
           A Anjos Terraplanagem e Locação LTDA é uma empresa estabelecida em
           Tijucas, Santa Catarina, com um legado de mais de 30 anos de atuação

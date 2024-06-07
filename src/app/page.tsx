@@ -8,12 +8,12 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Services from "../components/Services";
 import CompanyDescription from "@/components/CompanyDescription";
-import Head from "next/head";
 
 const Home = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
   const toggleSidebar = () => {
+    console.log("toggleSidebar");
     setShowSidebar(!showSidebar);
   };
 

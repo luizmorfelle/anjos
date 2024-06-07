@@ -4,3 +4,35 @@ export default function openWhatsapp() {
     "_blank"
   );
 }
+
+type HeaderLink = {
+  title: string;
+  idRef: string;
+};
+
+export const linksHeader: HeaderLink[] = [
+  {
+    title: "Home",
+    idRef: "start",
+  },
+  {
+    title: "Sobre",
+    idRef: "about-section",
+  },
+  {
+    title: "Valores",
+    idRef: "values-section",
+  },
+  {
+    title: "Serviços",
+    idRef: "service-section",
+  },
+  {
+    title: "Clientes",
+    idRef: "clients-section",
+  },
+  {
+    title: "Contato",
+    idRef: "contact-section",
+  },
+];
