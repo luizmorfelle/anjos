@@ -20,7 +20,7 @@ const Carousel: React.FC = () => {
       <div>
         <div className="md:h-[45rem] flex md:flex-row w-screen max-w-full">
           <img
-            src="/bg1.jpg"
+            src="/bg.jpeg"
             alt="Projeto 1"
             className=" w-full  object-cover object-center "
           />
