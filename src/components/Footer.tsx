@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
             className="flex items-center text-white gap-2 bg-orange-600 py-2 w-full rounded justify-center mt-2 font-medium text-sm hover:bg-orange-700 transition duration-200"
           >
             <FaWhatsapp size={16} />
-            <p>Entre em contato</p>
+            <p className="text-lg">Entre em contato</p>
           </button>
         </div>
         <div className="w-full md:w-auto mb-4 md:mb-0">

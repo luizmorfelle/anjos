@@ -26,7 +26,6 @@ body {
     )
     rgb(var(--background-start-rgb)); */
   /* font-family: Helvetica, Arial, "Lucida Grande", sans-serif; */
-  letter-spacing: 0.12em;
   font-weight: 300;
 }
 

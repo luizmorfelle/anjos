@@ -35,10 +35,10 @@ var settings = {
 const CompanyDescription: React.FC = () => {
   return (
     <section
-      className="py-16 bg-zinc-900 px-10 md:px-0 text-white"
+      className="py-16 bg-zinc-900 px-10 md:px-20 text-white"
       id="about-section"
     >
-      <div className="container mx-auto">
+      <div className="">
         <h2 className="text-3xl font-bold mb-6">A Empresa</h2>
         <p className="my-4">
           A Anjos Terraplanagem e Locação LTDA é uma empresa estabelecida em
@@ -65,7 +65,7 @@ const CompanyDescription: React.FC = () => {
           oferecendo soluções personalizadas e eficazes.
         </p>
       </div>
-      <div className="flex items-center justify-center mx-auto mt-10 md:px-48 px-0">
+      <div className="flex items-center justify-center mt-10 md:px-0 px-0">
         <div className="md:w-full w-screen h-[25rem] ">
           <Slider {...settings}>
             {Array(7)

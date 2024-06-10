@@ -1,30 +1,11 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { Inter } from "next/font/google";
 
-const helvetica = localFont({
-  src: [
-    {
-      path: "/fonts/HelveticaNeue-Light.otf",
-      weight: "400",
-    },
-    {
-      path: "/fonts/HelveticaNeue-Medium.otf",
-      weight: "500",
-    },
-    {
-      path: "/fonts/HelveticaNeue-BoldExt.otf",
-      weight: "700",
-    },
-    {
-      path: "/fonts/HelveticaNeue-BlackCond.otf",
-      weight: "800",
-    },
-  ],
-  display: "swap",
-});
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Anjos | Terraplanagem",
@@ -38,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={helvetica.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

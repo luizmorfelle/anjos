@@ -39,7 +39,7 @@ const ServiceCard = ({
         {description && (
           <div className="flex flex-col justify-evenly">
             {description.split("\\").map((item, index) => (
-              <div key={index} className="text-center py-3">
+              <div key={index} className="text-center text-lg py-3">
                 {item}
               </div>
             ))}
@@ -48,7 +48,7 @@ const ServiceCard = ({
         {items && (
           <ul className="list-disc ">
             {items.map((item, index) => (
-              <li key={index} className="p-1">
+              <li key={index} className="p-1 text-lg">
                 {item}
               </li>
             ))}
@@ -131,7 +131,7 @@ const Services: React.FC = () => {
               className="flex items-center text-white gap-2 bg-orange-600 py-2 w-full rounded justify-center mt-2 font-medium text-sm hover:bg-orange-700 transition duration-200"
             >
               <FaWhatsapp size={16} />
-              <p>Entre em contato</p>
+              <p className="text-lg">Entre em contato</p>
             </button>
           }
           icon={<FaPhoneFlip className="size-20 text-zinc-950" />}
