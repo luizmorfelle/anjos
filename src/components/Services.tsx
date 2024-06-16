@@ -32,7 +32,7 @@ const ServiceCard = ({
         <div className="flex justify-center items-center p-4 bg-white rounded-lg">
           {icon}
         </div>
-        <div className="text-2xl font-bold pt-6">{title}</div>
+        <h2 className="text-2xl font-bold pt-6">{title}</h2>
         <div className="my-4 w-48 h-0.5 bg-white">
           <div> </div>
         </div>

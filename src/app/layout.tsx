@@ -9,7 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Anjos | Terraplanagem",
-  description: "Anjos Terraplanagem",
+  description: "Anjos Terraplanagem é uma empresa especializada em Terraplanagem, Mineração, Enrocamento, Demolição, Drenagem, Limpeza de terreno e Locação de equipamentos.",
+  keywords: ["Anjos", "Terraplanagem", "Construção", "Obras", "Demolição", "Aterro", "Desaterro", "Limpeza de Terreno", "Locação de Máquinas", "Caminhão Basculante", "Retroescavadeira", "Escavadeira Hidráulica", "Pá Carregadeira", "Motoniveladora", "Rolo Compactador", "Mini Carregadeira", "Mini Escavadeira", "Bobcat", "Caminhão Munck", "Caminhão Pipa", "Caminhão Prancha", "Caminhão Caçamba", "Caminhão Tanque", "Caminhão Plataforma", "Caminhão Guincho", "Caminhão Munck", "Caminhão Poliguindaste"],
 };
 
 export default function RootLayout({

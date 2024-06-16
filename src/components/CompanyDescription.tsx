@@ -39,7 +39,7 @@ const CompanyDescription: React.FC = () => {
       id="about-section"
     >
       <div className="">
-        <h2 className="text-3xl font-bold mb-6">A Empresa</h2>
+        <h1 className="text-3xl font-bold mb-6">A Empresa</h1>
         <p className="my-4">
           A Anjos Terraplanagem e Locação LTDA é uma empresa estabelecida em
           Tijucas, Santa Catarina, com um legado de mais de 30 anos de atuação

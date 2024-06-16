@@ -21,7 +21,7 @@ const Clients: React.FC = () => {
   return (
     <section className="py-16 bg-gray-100" id="clients-section">
       <div className="flex flex-col container md:mx-auto items-center justify-center">
-        <h2 className="text-3xl font-bold mb-8">Nossos Clientes</h2>
+        <h1 className="text-3xl font-bold mb-8">Nossos Clientes</h1>
         <div className="grid grid-cols-2 px-3 md:px-0 md:grid-cols-4 md:gap-4 gap-2 lg:grid-cols-4">
           {Array(15)
             .fill(null)
