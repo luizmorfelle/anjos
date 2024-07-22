@@ -65,7 +65,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon-light.ico" />
+        <link rel="icon" href="/favicon-dark.ico" />
         <meta
           name="google-site-verification"
           content="F8Yv3HwckvHzDkdXr8W_dQDcFAg89N2529WXak55QWE"
