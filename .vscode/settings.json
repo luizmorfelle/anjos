@@ -77,7 +77,7 @@
     "editor.accessibilitySupport": "off",
     "explorer.confirmDragAndDrop": false,
     "terminal.integrated.fontSize": 14,
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.fontFamily": "monospace",
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit"
     },
@@ -147,7 +147,7 @@
     "apc.listRow": {
       "height": 24
     },
-    "apc.font.family": "Inter",
+    "apc.font.family": "JetBrains Mono",
     "apc.stylesheet": {
       ".title-label > h2": "display: none",
       ".editor-actions": "display: none",

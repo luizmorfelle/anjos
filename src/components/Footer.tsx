@@ -18,7 +18,8 @@ const Footer: React.FC = () => {
             <PhoneIcon className="h-6" />
             <h4 className=" ml-2 text-lg font-semibold mb-2">Contato</h4>
           </div>
-          <p>Telefone: (48) 3263-0436</p>
+          <p>Telefone: (48) 4042-3992</p>
+          <p>WhatsApp: (48) 3263-0436</p>
           <p>Email: anjosjunior@unetvale.com.br</p>
           <button
             onClick={(e) => {
