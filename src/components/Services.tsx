@@ -71,7 +71,7 @@ const Services: React.FC = () => {
           color="bg-orange-600"
         />
         <ServiceCard
-          title="Visão"
+          title="Valores"
           items={[
             "Qualidade",
             "Integridade",
