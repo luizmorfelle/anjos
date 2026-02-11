@@ -37,10 +37,10 @@ const Footer: React.FC = () => {
             <MapPinIcon className="h-6" />
             <h4 className="ml-2 text-lg font-semibold mb-2">Localização</h4>
           </div>
-          <p>Rua Guilherme Varela, 120</p>
-          <p>Bairro Centro</p>
-          <p>Cidade Tijucas</p>
-          <p>CEP: 88200-000</p>
+          <p>Rua: Guilherme Varela, 120</p>
+          <p>Bairro: XV de Novembro</p>
+          <p>Cidade: Tijucas</p>
+          <p>CEP: 88203-100</p>
         </div>
 
         <div>

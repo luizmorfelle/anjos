@@ -66,12 +66,12 @@ const Services: React.FC = () => {
       <div className="grid md:grid-cols-3 grid-cols-1">
         <ServiceCard
           title="Missão"
-          description="Nossa missão é fornecer serviços de terreplanagem de alta qualidade, eficientes e seguros. Oferecendo para nossos clientes, soluções personalizadas que atendam às suas necessidades, com respeito ao meio ambiente e comprometimento com a segurança e saúde de nossos colaboradores."
+          description="Nossa missão é fornecer serviços de terraplanagem de alta qualidade, eficientes e seguros. Oferecendo para nossos clientes, soluções personalizadas que atendam às suas necessidades, com respeito ao meio ambiente e comprometimento com a segurança e saúde de nossos colaboradores."
           icon={<GiBullseye className="size-20 text-orange-600" />}
           color="bg-orange-600"
         />
         <ServiceCard
-          title="Valores"
+          title="Visão"
           items={[
             "Qualidade",
             "Integridade",

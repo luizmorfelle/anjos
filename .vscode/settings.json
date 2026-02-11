@@ -87,7 +87,7 @@
       "graphql"
     ],
     "editor.semanticHighlighting.enabled": false,
-    "workbench.productIconTheme": "fluent-icons",
+    "workbench.productIconTheme": "Default",
     "editor.fontFamily": "JetBrains Mono",
     "gitlens.codeLens.authors.enabled": false,
     "editor.tabSize": 2,

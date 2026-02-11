@@ -20,17 +20,17 @@ export const linksHeader: HeaderLink[] = [
     idRef: "about-section",
   },
   {
-    title: "Valores",
+    title: "Visão",
     idRef: "values-section",
   },
   {
     title: "Serviços",
     idRef: "service-section",
   },
-  {
-    title: "Clientes",
-    idRef: "clients-section",
-  },
+  // {
+  //   title: "Clientes",
+  //   idRef: "clients-section",
+  // },
   {
     title: "Contato",
     idRef: "contact-section",
